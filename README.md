@@ -17,6 +17,7 @@ A CHIP-8 Emulator in golang
   ```
 
 * Debug
+
   |Key|Description|
   |--|--|
   |SPACE|Pause and Step into|
