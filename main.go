@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"io/ioutil"
+	"io"
 	"os"
 	"runtime"
 
@@ -20,7 +20,7 @@ func main() {
 	flag.Parse()
 
 	f, _ := os.Open(*filename)
-	binary, _ := ioutil.ReadAll(f)
+	binary, _ := io.ReadAll(f)
 
 	emu := e.NewEmulator(binary, *stepMode)
 	emu.Run()
